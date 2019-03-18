@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Browse = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -48,6 +49,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -130,10 +133,10 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(310, 78);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(128, 21);
+            this.radioButton2.Size = new System.Drawing.Size(135, 21);
             this.radioButton2.TabIndex = 8;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Menjauhi Istana";
+            this.radioButton2.Text = "Away from castle";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
@@ -209,10 +212,10 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(153, 78);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(136, 21);
+            this.radioButton1.Size = new System.Drawing.Size(124, 21);
             this.radioButton1.TabIndex = 7;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Mendekati Istana";
+            this.radioButton1.Text = "Towards castle";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
@@ -225,17 +228,22 @@
             this.button4.TabIndex = 17;
             this.button4.Text = "Show query";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.button5.Location = new System.Drawing.Point(664, 11);
+            this.button5.Location = new System.Drawing.Point(665, 11);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(124, 23);
             this.button5.TabIndex = 18;
             this.button5.Text = "Show graph";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // Form1
             // 
@@ -264,6 +272,7 @@
             this.Name = "Form1";
             this.Text = " Hide and Seek";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -291,6 +300,7 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

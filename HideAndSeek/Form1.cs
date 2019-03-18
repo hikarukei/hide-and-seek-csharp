@@ -138,13 +138,46 @@ namespace HideAndSeek
         }
 
         private void Button5_Click(object sender, EventArgs e)
-        {
-
+        { 
+            string filePath = openFileDialog1.FileName;
+            if (filePath != "")
+            {
+                // Show the complete graph according to filePath
+            }
         }
 
         private void TextBox1_TextChanged(object sender, EventArgs e)
         {
+            updateButtonShowGraph();
+        }
 
+        private void TextBox1_Validating(object sender, CancelEventArgs e)
+        {
+            updateButtonShowGraph();
+        }
+
+        private void updateButtonShowGraph()
+        {
+            button5.Enabled = textBox1.Text != string.Empty && openFileDialog1.CheckFileExists;
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+            updateButtonShowQuery();
+        }
+
+        private void TextBox2_Validating(object sender, CancelEventArgs e)
+        {
+            updateButtonShowQuery();
+        }
+
+        private void updateButtonShowQuery()
+        {
+            button4.Enabled = textBox2.Text != string.Empty && openFileDialog2.CheckFileExists;
         }
     }
 }
