@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +10,10 @@ namespace HideAndSeek
     public class Graph
     {
         public int n_house;
-        public List<int>[] way = new List<int>[100];
-        public int[] level = new int[100];
-        public bool[] visited = new bool[100];
-        public int[] history = new int[100];
+        public List<int>[] way = new List<int>[100000];
+        public int[] level = new int[100000];
+        public bool[] visited = new bool[100000];
+        public int[] history = new int[100000];
         public bool found;
         public List<int> finalPath;
 
