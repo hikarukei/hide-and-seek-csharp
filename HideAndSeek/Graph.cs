@@ -10,10 +10,10 @@ namespace HideAndSeek
     public class Graph
     {
         public int n_house;
-        public List<int>[] way = new List<int>[100000];
-        public int[] level = new int[100000];
-        public bool[] visited = new bool[100000];
-        public int[] history = new int[100000];
+        public List<int>[] way = new List<int>[100008];
+        public int[] level = new int[100008];
+        public bool[] visited = new bool[100008];
+        public int[] history = new int[100008];
         public bool found;
         public List<int> finalPath;
 
